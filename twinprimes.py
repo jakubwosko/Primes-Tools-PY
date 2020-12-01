@@ -13,6 +13,9 @@ import math   # import math module
 
 def is_prime(my_num):
 
+    # special case for number two - which is the only even prime
+    if my_num == 2:return 1
+    
     if my_num == 3 or my_num == 5:return 1
     if my_num % 2 == 0 or my_num % 3 == 0 or my_num % 5 == 0:return 0
 
