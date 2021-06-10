@@ -1,13 +1,18 @@
-#6k+-1
+# Primality test using 6k+-1 optimization
+import math
 
-def is_prime(my_num):
+def is_prime(n):
 
-    if my_num == 2 or my_num == 3 or my_num == 5:return True
-    if my_num % 2 == 0 or my_num % 3 == 0 or my_num % 5 == 0:return False
+    limit = math.sqrt(n)
 
-    sqr=int(math.sqrt(my_num))
-            
-    for x in range(6, sqr+2, 6):
-        if my_num % (x-1) == 0 or my_num % (x+1) == 0:
-            return False
+    if (n <=1): return False
+    if (n == 2 or n==3 or n==5): return True
+    if n % 2 == 0 or n % 3 == 0: return False
+
+    for x in range(5, int(limit), 6):
+        if n % (x) == 0 or n % (x+2) == 0: return False
     return True
+    
+x=103
+if (is_prime(x) == True): print("PRIME") 
+else: print("NOT PRIME")
