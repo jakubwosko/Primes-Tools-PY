@@ -1,6 +1,7 @@
 ################################################################################
-# This algorithm uses three properties of numbers:                             #
-# 1. every prime number is of form 6n+-1, [test_6kpm1() tests if num is 6n+-1] #
+# The algo uses following three properties of numbers:                         #
+#                                                                              #
+# 1. every prime number a form of 6n+-1, [test_6kpm1() tests if num is 6n+-1]  #
 # 2. 6n+1 number is NOT a prime then and only then when one number             # 
 #    I=(3n-r)/(2r+1) for r=1,2....,n-1 is integer [prime_test_6np1()]          #
 # 3. 6n-1 number is NOT a prime then and only then when one number             #
